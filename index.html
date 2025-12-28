@@ -57,6 +57,54 @@
             background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
             background-color: #050505;
         }
+
+                /* --- SLIDER FIX START --- */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+
+        input[type=range]:focus { outline: none; }
+
+        /* Track (Der Balken) */
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 6px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Thumb (Der Knopf) */
+        input[type=range]::-webkit-slider-thumb {
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background: #a855f7;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -7px; /* Zentriert den Knopf auf dem Track */
+            box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+            border: 2px solid white;
+        }
+
+        /* Firefox Support */
+        input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        input[type=range]::-moz-range-thumb {
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background: #a855f7;
+            border: 2px solid white;
+        }
+        /* --- SLIDER FIX ENDE --- */
     </style>
 <script type="importmap">
 {
