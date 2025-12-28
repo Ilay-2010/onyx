@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 declare const QRCode: any;
 
 const QRGenerator: React.FC = () => {
-  const [text, setText] = useState('https://onyx.studio');
+  const [text, setText] = useState('https://ilay-2010.github.io/onyx/');
   const [fgColor, setFgColor] = useState('#000000');
   const [bgColor, setBgColor] = useState('#FFFFFF');
   const qrRef = useRef<HTMLDivElement>(null);
