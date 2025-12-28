@@ -1,0 +1,8 @@
+{
+  "name": "ONYX STUDIO PRO",
+  "description": "Premium multi-tool suite for creators. Local-first image editing, DAW-grade audio mixing, rich-text PDF generation, and secure developer utilities.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
