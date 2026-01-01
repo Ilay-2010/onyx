@@ -1,20 +1,18 @@
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './', // Ensures assets are loaded correctly on GitHub Pages subpaths
+  base: './', // Sicherstellen, dass Assets auf GitHub Pages korrekt geladen werden
   build: {
     outDir: 'dist',
-    rollupOptions: {
-      input: {
-        main: './index.html',
-      },
-    },
+    sourcemap: false,
+    minify: 'esbuild', // Nutzt den integrierten, extrem schnellen Minifier
+    target: 'esnext'
   },
-  server: {
-    port: 3000,
+  esbuild: {
+    // Entfernt alle console.* und debugger Aufrufe im Produktions-Build
+    drop: ['console', 'debugger'],
   },
 });
